@@ -1,0 +1,133 @@
+body, html {
+    margin: 0;
+}
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app-header {
+    background-color: #4285f4;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .app-header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .search-input {
+    padding: 8px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .file-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .file-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f3f4;
+    border-radius: 8px;
+    width: 220px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+  }
+  
+  .file-item:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .file-icon {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .folder-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    padding: 5px;
+  }
+  .folder-icon svg{
+    fill: #f9f9f9;
+  }
+  
+  .file-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .file-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .file-size {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .addButton{
+    width: 50px;
+    height: auto;
+    position: absolute;
+    bottom: 50px;
+    right: 70px;
+  }
+  .addButton svg{
+    fill: #4285f4;
+  }
+  
+  dialog{
+    border: 0;
+    padding: 20px 30px;
+    border-radius: 15px;
+  }
+
+  dialog>form>button{
+    border: 1px solid #ddd;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    color: #2c2c2c;
+    float: right;
+  }
+  dialog>form>i{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 14px;
+    color: #2c2c2c;
+    cursor: pointer;
+  }
