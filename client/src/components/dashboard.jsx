@@ -32,7 +32,7 @@ export default function Dashboard(){
 
     useEffect(()=> {
         //get to check if the params actually match with the user.id
-        fetch('http://localhost:5000/api/')
+        fetch('http://localhost:5000/api/',{credentials: 'include'})
         .then((response) => response.json())
         .then((data) => console.log(data))
         .catch((error) => console.error('Error fetching data:', error));

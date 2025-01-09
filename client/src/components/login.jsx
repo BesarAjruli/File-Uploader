@@ -16,6 +16,7 @@ export default function LogIn(){
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data),
+            credentials: 'include',
            })
            const results = await resposne.json()
            if(results.success){
