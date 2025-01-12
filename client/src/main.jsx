@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: < Dashboard />
   },
   {
-    path: '/folder',
+    path: '/folder/:id',
     element: < Folder />
   },
   {

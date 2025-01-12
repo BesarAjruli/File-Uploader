@@ -5,17 +5,6 @@ import "../style/signup.css";
 export default function NewUser() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  /*useEffect( () => {
-        fetch('http://localhost:5000/api/test')
-        .then( response => response.json() )
-        .then( data => {
-            setUser(data)
-            console.log(data)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-    },[])*/
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -43,11 +32,6 @@ export default function NewUser() {
   };
   return (
     <>
-      {/*(typeof user.test === 'undefined') ? (
-            <p>Loading...</p>
-        ): user.test.map((item, i) => (
-            <p key={i}>{item}</p>
-        ))*/}
       <div className="body">
         <div className="signup-container">
           <h2>Sign Up</h2>

@@ -23,6 +23,49 @@ async function createUser(res, req) {
   });
 }
 
+async function createFolder(req, res) {
+  const name = req.body.name
+  const userid = parseInt(req.body.userId)
+  await prisma.folder.create({
+    data: {
+      name: name,
+      userId: userid
+    }
+  }).catch(error => console.log(error))
+  res.json({success: true})
+}
+
+async function getFolders(req){
+  const userId = req.user.id
+  const folders = await prisma.folder.findMany({where: {userId: userId}})
+  return folders
+}
+
+async function getFiles(req, folderID){
+  const folderId = parseInt(folderID)
+  const files = await prisma.files.findMany({where: {folderId: folderId}})
+  return files
+} 
+
+async function createFile(req, res) {
+  const name = req.body.name
+  const size = parseInt(req.body.size)
+  const type = req.body.type
+  const folderId = parseInt(req.body.folderId)
+  await prisma.files.create({
+    data: {
+      name: name,
+      size: size,
+      type: type,
+      folderId: folderId
+    }
+  }).catch(error => console.log(error))
+  res.json({success: true})
+}
 module.exports = {
   createUser,
+  createFolder,
+  getFolders,
+  getFiles,
+  createFile
 };

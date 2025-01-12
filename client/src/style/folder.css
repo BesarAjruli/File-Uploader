@@ -1,6 +1,10 @@
 body, html {
     margin: 0;
 }
+
+a{
+  text-decoration: none;
+}
 .app-container {
     display: flex;
     flex-direction: column;
@@ -21,6 +25,7 @@ body, html {
   .app-header h1 {
     margin: 0;
     font-size: 24px;
+    color: #fff;
   }
   
   .search-input {
@@ -59,6 +64,7 @@ body, html {
     font-size: 24px;
     width: 40px;
     height: 40px;
+    overflow: hidden;
     background-color: #ccc;
     color: white;
     display: flex;
@@ -91,6 +97,10 @@ body, html {
   .file-name {
     font-size: 16px;
     font-weight: bold;
+    width: 20ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #363636;
   }
   
   .file-size {
@@ -104,6 +114,7 @@ body, html {
     position: absolute;
     bottom: 50px;
     right: 70px;
+    cursor: pointer;
   }
   .addButton svg{
     fill: #4285f4;
